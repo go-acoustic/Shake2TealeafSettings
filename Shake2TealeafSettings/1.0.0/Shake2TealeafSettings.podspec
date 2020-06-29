@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/ibm-watson-cxa/Shake2TealeafSettings.git', :tag => '1.0.0'}
   s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CoreLocation', 'WebKit'
   s.library = 'z'
+  s.dependency 'IBMTealeaf'
 end
