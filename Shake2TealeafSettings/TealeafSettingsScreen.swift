@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Tealeaf
 extension UIWindow {
     open override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
@@ -41,6 +42,8 @@ struct TealeafSettingsScreen : View {
             TextField("Enter PostMessageUrl", text: $postMessageUrl)
         }
         Button(action: {
+            TLFApplicationHelper.sharedInstance()?.setPostMessageUrl(self.postMessageUrl)
+            TLFApplicationHelper.sharedInstance()?.setConfigurableItem("AppKey", value: self.appKey)
             self.presentationMode.wrappedValue.dismiss()
         }) {
           Text("Save and Back")

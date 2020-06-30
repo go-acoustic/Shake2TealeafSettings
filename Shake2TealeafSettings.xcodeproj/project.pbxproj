@@ -3,19 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1368474261B5B5BBC8406A0C /* Pods_Shake2TealeafSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839FB2698D6584DE391784ED /* Pods_Shake2TealeafSettings.framework */; };
 		6317CA08249D7AB500B840F0 /* Shake2TealeafSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 6317CA06249D7AB500B840F0 /* Shake2TealeafSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6317CA0F249D7BD500B840F0 /* TealeafSettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6317CA0E249D7BD500B840F0 /* TealeafSettingsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D36498E70419E593508FC90 /* Pods-Shake2TealeafSettings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shake2TealeafSettings.debug.xcconfig"; path = "Target Support Files/Pods-Shake2TealeafSettings/Pods-Shake2TealeafSettings.debug.xcconfig"; sourceTree = "<group>"; };
 		6317CA03249D7AB500B840F0 /* Shake2TealeafSettings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shake2TealeafSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6317CA06249D7AB500B840F0 /* Shake2TealeafSettings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shake2TealeafSettings.h; sourceTree = "<group>"; };
 		6317CA07249D7AB500B840F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6317CA0E249D7BD500B840F0 /* TealeafSettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealeafSettingsScreen.swift; sourceTree = "<group>"; };
+		839FB2698D6584DE391784ED /* Pods_Shake2TealeafSettings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shake2TealeafSettings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5876CB55E02BEF145BC1ADA /* Pods-Shake2TealeafSettings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shake2TealeafSettings.release.xcconfig"; path = "Target Support Files/Pods-Shake2TealeafSettings/Pods-Shake2TealeafSettings.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,18 +27,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1368474261B5B5BBC8406A0C /* Pods_Shake2TealeafSettings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17554CE978A4F2247C850AC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D36498E70419E593508FC90 /* Pods-Shake2TealeafSettings.debug.xcconfig */,
+				A5876CB55E02BEF145BC1ADA /* Pods-Shake2TealeafSettings.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6317C9F9249D7AB500B840F0 = {
 			isa = PBXGroup;
 			children = (
 				6317CA05249D7AB500B840F0 /* Shake2TealeafSettings */,
 				6317CA04249D7AB500B840F0 /* Products */,
 				6333D09924AA78D00042CF02 /* Frameworks */,
+				17554CE978A4F2247C850AC8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +74,7 @@
 		6333D09924AA78D00042CF02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				839FB2698D6584DE391784ED /* Pods_Shake2TealeafSettings.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6317CA0B249D7AB500B840F0 /* Build configuration list for PBXNativeTarget "Shake2TealeafSettings" */;
 			buildPhases = (
+				63DE91B77DE5AEB6817058DB /* [CP] Check Pods Manifest.lock */,
 				6317C9FE249D7AB500B840F0 /* Headers */,
 				6317C9FF249D7AB500B840F0 /* Sources */,
 				6317CA00249D7AB500B840F0 /* Frameworks */,
 				6317CA01249D7AB500B840F0 /* Resources */,
+				FEF0295B249EB7B74BDFACF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +155,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63DE91B77DE5AEB6817058DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shake2TealeafSettings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEF0295B249EB7B74BDFACF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shake2TealeafSettings/Pods-Shake2TealeafSettings-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shake2TealeafSettings/Pods-Shake2TealeafSettings-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shake2TealeafSettings/Pods-Shake2TealeafSettings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6317C9FF249D7AB500B840F0 /* Sources */ = {
@@ -274,9 +334,11 @@
 		};
 		6317CA0C249D7AB500B840F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D36498E70419E593508FC90 /* Pods-Shake2TealeafSettings.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QXQ67VKX2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -300,9 +362,11 @@
 		};
 		6317CA0D249D7AB500B840F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5876CB55E02BEF145BC1ADA /* Pods-Shake2TealeafSettings.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QXQ67VKX2B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
