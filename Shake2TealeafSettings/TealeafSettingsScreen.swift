@@ -16,10 +16,18 @@ extension UIWindow {
                 while let presentedViewController = topController.presentedViewController {
                     topController = presentedViewController
                 }
-                let navigationCtrl = topController as! UINavigationController
-                let vc = UIHostingController(rootView: TealeafSettingsScreen())
-                //topController.present(vc, animated: true, completion: nil)
-                navigationCtrl.pushViewController(vc, animated: true)
+                if topController is UINavigationController
+                {
+                    let navigationCtrl = topController as! UINavigationController
+                    let vc = UIHostingController(rootView: TealeafSettingsScreen(dismissAction: {}))
+                    //topController.present(vc, animated: true, completion: nil)
+                    navigationCtrl.pushViewController(vc, animated: true)
+                }
+                else
+                {
+                    let vc = UIHostingController(rootView: TealeafSettingsScreen(dismissAction: {topController.dismiss( animated: true, completion: nil )}))
+                    topController.present(vc, animated: true, completion: nil)
+                }
             }
         }
     }
@@ -30,7 +38,8 @@ struct TealeafSettingsScreen : View {
     @Environment(\.presentationMode) private var presentationMode
     @State private var appKey: String = "c7759ff3abb1435993e99a52ba6c0c96"
     @State private var postMessageUrl: String = "http://lib-us-2.brilliantcollector.com/collector/collectorPost"
-
+    var dismissAction: (() -> Void)
+    
   var body: some View {
     VStack {
         HStack {
@@ -45,6 +54,7 @@ struct TealeafSettingsScreen : View {
             TLFApplicationHelper.sharedInstance()?.setPostMessageUrl(self.postMessageUrl)
             TLFApplicationHelper.sharedInstance()?.setConfigurableItem("AppKey", value: self.appKey)
             self.presentationMode.wrappedValue.dismiss()
+            self.dismissAction()
         }) {
           Text("Save and Back")
         }
@@ -54,6 +64,6 @@ struct TealeafSettingsScreen : View {
 
 struct TealeafSettingsScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TealeafSettingsScreen()
+        TealeafSettingsScreen(dismissAction: {})
     }
 }
