@@ -7,6 +7,6 @@ target 'Shake2TealeafSettings' do
 
   # Pods for Shake2TealeafSettings
 
-  pod 'IBMTealeaf'
+  pod 'TealeafDebug'
 
 end
