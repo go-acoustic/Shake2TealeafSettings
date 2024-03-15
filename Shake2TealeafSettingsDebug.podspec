@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.summary = 'Acoustic Tealeaf Settings Screen '
   s.platforms = { :ios => "13.0" }
   s.source_files = 'Shake2TealeafSettings/*.{h,swift}'
-  s.source = { :git => 'https://github.com/acoustic-analytics/Shake2TealeafSettings.git', :tag => '1.0.3'}
+  s.source = { :git => 'https://github.com/go-acoustic/Shake2TealeafSettings.git', :tag => '1.0.3'}
   s.frameworks = 'SystemConfiguration', 'CoreTelephony', 'CoreLocation', 'WebKit'
   s.library = 'z'
   s.dependency 'IBMTealeafDebug', '10.6.27'
